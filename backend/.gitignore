@@ -1,0 +1,11 @@
+# Dependencies
+node_modules
+*.log
+.env.local
+.env.production
+.vercel
+
+# Prisma
+.env
+prisma/migrations/*
+!prisma/migrations/.gitkeep

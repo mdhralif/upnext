@@ -1,0 +1,249 @@
+{
+  "info": {
+    "name": "Todo App API",
+    "description": "Complete API collection for the Todo App with authentication and CRUD operations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{auth_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"john.doe@example.com\",\n    \"username\": \"johndoe\",\n    \"password\": \"password123\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/register",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"john.doe@example.com\",\n    \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "login"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {
+          "name": "Get All Tasks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tasks",
+              "host": ["{{base_url}}"],
+              "path": ["tasks"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "PENDING",
+                  "disabled": true
+                },
+                {
+                  "key": "priority",
+                  "value": "HIGH",
+                  "disabled": true
+                },
+                {
+                  "key": "completed",
+                  "value": "false",
+                  "disabled": true
+                },
+                {
+                  "key": "search",
+                  "value": "meeting",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Task",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Complete project documentation\",\n    \"description\": \"Write comprehensive documentation for the todo app project\",\n    \"status\": \"PENDING\",\n    \"priority\": \"HIGH\",\n    \"dueDate\": \"2025-07-20T10:00:00.000Z\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/tasks",
+              "host": ["{{base_url}}"],
+              "path": ["tasks"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Task",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tasks/{{task_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["tasks", "{{task_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Task",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Updated task title\",\n    \"description\": \"Updated description\",\n    \"status\": \"IN_PROGRESS\",\n    \"priority\": \"MEDIUM\",\n    \"dueDate\": \"2025-07-22T15:30:00.000Z\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/tasks/{{task_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["tasks", "{{task_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Task",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tasks/{{task_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["tasks", "{{task_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Toggle Task Completion",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tasks/{{task_id}}/toggle",
+              "host": ["{{base_url}}"],
+              "path": ["tasks", "{{task_id}}", "toggle"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Get User Profile",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/users/profile",
+              "host": ["{{base_url}}"],
+              "path": ["users", "profile"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User Statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/users/stats",
+              "host": ["{{base_url}}"],
+              "path": ["users", "stats"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": ["{{base_url}}"],
+          "path": ["health"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000/api"
+    },
+    {
+      "key": "auth_token",
+      "value": ""
+    },
+    {
+      "key": "task_id",
+      "value": ""
+    }
+  ]
+}
