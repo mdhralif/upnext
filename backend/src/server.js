@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000;
 app.use(helmet());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://upnext-frontend.vercel.app/'] 
+    ? ['https://upnext-frontend.vercel.app'] 
     : ['http://localhost:3000'],
   credentials: true
 }));
