@@ -2,7 +2,7 @@
 
 A modern, full-stack todo application built with Next.js, Node.js, and PostgreSQL featuring drag-and-drop task reordering, user authentication, and responsive design.
 
-## ✨ Features
+## Features
 
 - **User Authentication** - Secure login/register with JWT tokens
 - **Task Management** - Create, edit, delete, and complete tasks
@@ -12,7 +12,7 @@ A modern, full-stack todo application built with Next.js, Node.js, and PostgreSQ
 - **Responsive Design** - Optimized for mobile and desktop
 - **Real-time Updates** - Instant UI updates with optimistic updates
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Next.js 15** - React framework with App Router
@@ -32,7 +32,7 @@ A modern, full-stack todo application built with Next.js, Node.js, and PostgreSQ
 - **bcryptjs** - Password hashing
 - **express-validator** - Input validation
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 18+ 
@@ -98,7 +98,7 @@ A modern, full-stack todo application built with Next.js, Node.js, and PostgreSQ
 6. **Open your browser**
    Navigate to `http://localhost:3000`
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 upnext/
@@ -126,7 +126,7 @@ upnext/
 └── README.md
 ```
 
-## 🎯 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /api/auth/register` - Register new user
@@ -161,38 +161,17 @@ upnext/
 - Separate mobile and desktop layouts for optimal UX
 - Touch-optimized controls for mobile devices
 
-## 🚀 Deployment
+## Deployment
 
 ### Using Docker
 ```bash
 docker-compose up --build
 ```
 
-### Manual Deployment
-1. Build the frontend: `npm run build`
-2. Set production environment variables
-3. Deploy backend to your preferred platform (Railway, Heroku, etc.)
-4. Deploy frontend to Vercel, Netlify, or similar
-5. Update API URLs in environment variables
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- [Next.js](https://nextjs.org/) - The React Framework
-- [Prisma](https://prisma.io/) - Next-generation ORM
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
-- [@dnd-kit](https://dndkit.com/) - Modern drag-and-drop library
 
 ---
 
