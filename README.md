@@ -2,9 +2,10 @@
 # UpNext - Todo Application
 
 ## App Preview
+![UpNext App Screenshot](docs/loginForm.png)
 ![UpNext App Screenshot](docs/UserInterface.png)
 ![UpNext App Screenshot](docs/createForm.png)
-![UpNext App Screenshot](docs/loginForm.png)
+
 
 
 A modern, full-stack todo application built with Next.js, Node.js, and PostgreSQL featuring drag-and-drop task reordering, user authentication, and responsive design.
