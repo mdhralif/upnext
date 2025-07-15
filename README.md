@@ -152,7 +152,7 @@ upnext/
 - `GET /api/users/profile` - Get user profile
 - `GET /api/users/stats` - Get user statistics
 
-## 🔧 Key Features Implementation
+## Key Features Implementation
 
 ### Drag & Drop Reordering
 - Uses `@dnd-kit/sortable` for accessible drag-and-drop
